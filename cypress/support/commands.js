@@ -1,3 +1,28 @@
+Cypress.Commands.add('login', (email, senha) => { 
+    cy.get('[data-test="login-button"]').click();
+    cy.get('[data-test="input-loginEmail"]').type(email);
+    cy.get('[data-test="input-loginPassword"]').type(senha);
+    cy.get('[data-test="submit-button"]').click();
+ })
+
+
+ Cypress.Commands.add('adiciona', (item, item2) =>{
+     cy.get('[data-test=new-todo]').type(`${item} {enter}`);
+     cy.get('[data-test=new-todo]').type(`${item2} {enter}`);
+})
+
+Cypress.Commands.add('cadastrar', (nome, email, senha) => { 
+   // cy.contains('a', 'Cadastrar').click();
+    cy.get('[data-test="input-name"]').type(nome);
+    cy.get('[data-test="input-email"]').type(email);
+    cy.get('[data-test="input-password"]').type(senha);
+    cy.get('[data-test="input-confirm-password"]').type(senha);
+    cy.get('[data-test="submit-button"]').click();
+ })
+
+
+
+
 // ***********************************************
 // This example commands.js shows you how to
 // create various custom commands and overwrite
