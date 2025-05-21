@@ -1,6 +1,7 @@
 const { method } = require("bluebird")
 
-describe('Api Adopet',()=>{
+describle('Api Adopet',()=>{
+  //  const temoEsperado =Math.random() * 1000
     const authorization = `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMTY0M2NkNi03MTEyLTQxNWItOTVkMi0wNzkwNGIwZDFhMWMiLCJhZG9wdGVyTmFtZSI6IkFuYSBkZSBKZXN1cyIsImlhdCI6MTcwOTA0MTMwNSwiZXhwIjoxNzA5MzAwNTA1fQ.nhiaUyKdvN8RVxCkvne2gyI5n_pYnY_OMMdogMMqOlc`
 
     it('Mensagens da API', ()=>{
@@ -12,6 +13,7 @@ describe('Api Adopet',()=>{
         expect(res.status).to.be.equal(200)
         expect(res.body).is.not.empty
         expect(res.body).to.have.property('msg')
+      //  expect(res.duration).to.be.lte(temoEsperado)
     })
 })
 })
